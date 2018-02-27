@@ -1,6 +1,6 @@
-# RNA-Seq data analysis in complex structural variants cases (cSVs)
-Analysis of RNA-Seq data from patients with cSVs
+# Complex structural variants (cSVs) analysis in RNA-Seq data
+These tools provide way to analyse differential gene expresion and allowing rational filtering and combinig results of fusion genes analysis with special address to cSVs cases.
   
-  1) combine fusion genes metacaller approach 
-  2) differential gene expresion in cohort without appropriate control group 
+  1) combine and filter fusion genes pipeline results using metacaller approach 
+  2) perform differential gene expresion in cohort without appropriate control group 
   
