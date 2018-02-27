@@ -12,8 +12,7 @@ No need for instalation
   1) Download bla.R RScript from repository 
   2) Copy inputs to bla.R RScript folder:
      Only neccesary input file is normalized expression table on log2 scale in tab separetated format (expression_table.tsv)
-  3) Run bla.R RScript with appropriate parametres in way:
-  
+  3) Run bla.R RScript with appropriate parametres: \n
      Rscript --vanilla bla.R {expression_table.tsv} "p_value" {outputfile_name.txt}
       where: p_value is required value of sigificance for differentialy expressed gene (default: 0,05)         
              
