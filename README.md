@@ -4,12 +4,19 @@ These tools provide way to analyse differential gene expresion and allowing rati
   1) perform differential gene expresion in cohort without appropriate control group
   2) combine and filter fusion genes pipeline results using metacaller approach
   
-## Analysis 1)
-uvod
-how to run - inut files a parameters
-outputs description
+## Analysis 1
+Uncoventional statistical approach for differential gene expresion based on comparing individual cases in sample set without control group (for datasets, where in principle no adequate control group exist, for example cSVs as chromothripsis or chromoanasynthesis). More detail will come soon. (manuscript in preparation)
 
-## Analysis 2)
+### Run analysis 1
+No need for instalation
+  1) Download bla.R RScript from repository 
+  2) Copy inputs to bla.R RScript folder:
+     Only neccesary input file is normalized expression table on log2 scale in tab separetated format (expression_table.tsv)
+  3) Run bla.R RScript with appropriate parametres in way:
+     Rscript --vanilla bla.R {expression_table.tsv} "p_value" {outputfile_name.txt}
+      where: p_value is required value of sigificance for differentialy expressed gene (default: 0,05)         
+             
+## Analysis 2
 uvod
 how to run - inut files a parameters
 outputs description
