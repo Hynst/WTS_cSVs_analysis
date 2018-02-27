@@ -1,1 +1,1 @@
-# Complex structural variants analysis in Whole transcriptome sequencing NGS data
+# RNA-Seq data analysis in complex structural variants cases
