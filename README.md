@@ -2,7 +2,7 @@
 These tools provide way to analyse differential gene expresion and allowing rational filtering and combinig results of fusion genes analysis with special address to cSVs cases.
 
   1) perform differential gene expresion in cohort without appropriate control group
-  2) combine and filter fusion genes pipeline results using metacaller approach
+  2) combine and filter fusion genes pipelines results using metacaller approach
   
 ## Analysis 1
 Uncoventional statistical approach for differential gene expresion based on comparing individual cases in sample set without control group (for datasets, where in principle no adequate control group exist, for example cSVs as chromothripsis or chromoanasynthesis). More detail will come soon. (manuscript in preparation)
@@ -14,11 +14,11 @@ No need for instalation
      <br /> Only neccesary input file is normalized expression table on log2 scale in tab separetated format          expression_table.tsv)
   3) Run bla.R RScript with appropriate parametres:
      <br /> Rscript --vanilla bla.R {expression_table.tsv} "p_value" {outputfile_name.txt}
-     <br /> where p_value is required value of sigificance for differentialy expressed gene (default: 0,05)         
+     <br /> where p_value is required value of sigificance for differentialy expressed genes (default: 0,05)         
 
 Output file is in .tsv format with lines represented all differential expresed genes in dataset, and with columns for individual samples (up/down regulation tag is used to highlight)
  
 ## Analysis 2
-uvod
-how to run - inut files a parameters
-outputs description
+This tool for fusion genes identification was develop with aim to rationaly filter and combine multiple results from different pipelines to maximize results reliability. Such an approach of combining results from different state of art fully automated pipelines (EricScript, JAFFA, FusionCatcher) prevent to call false positive fusion events.
+
+### Run analysis 2
