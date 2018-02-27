@@ -1,2 +1,6 @@
 # RNA-Seq data analysis in complex structural variants cases (cSVs)
-Analyze your RNA-Seq data with cSVs like chromothripsis, chromoanasynthesis ..
+Analysis of RNA-Seq data from patients with cSVs
+  
+  1) combine fusion genes metacaller approach 
+  2) differential gene expresion in cohort without appropriate control group 
+  
