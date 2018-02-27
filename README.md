@@ -11,7 +11,7 @@ Uncoventional statistical approach for differential gene expresion based on comp
 No need for instalation
   1) Download bla.R RScript from repository 
   2) Copy inputs to bla.R RScript folder:
-     <br /> Only neccesary input file is normalized expression table on log2 scale in tab separetated format          expression_table.tsv)
+     <br /> Only neccesary input file is normalized expression table on log2 scale in tab separetated format          "expression_table.tsv")
   3) Run bla.R RScript with appropriate parametres:
      <br /> Rscript --vanilla bla.R {expression_table.tsv} "p_value" {outputfile_name.txt}
      <br /> where p_value is required value of sigificance for differentialy expressed genes (default: 0,05)         
