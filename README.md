@@ -16,7 +16,7 @@ No need for instalation
      <br /> Rscript --vanilla bla.R {expression_table.tsv} "p_value" {outputfile_name.txt}
      <br />   where: p_value is required value of sigificance for differentialy expressed gene (default: 0,05)         
 
-Output file is in .tsv format with lines represented all differential expresed genes in dataset, and with columns for individual samples (up/down tag is mentioned)
+Output file is in .tsv format with lines represented all differential expresed genes in dataset, and with columns for individual samples (up/down regulation tag is mentioned)
  
 ## Analysis 2
 uvod
