@@ -24,7 +24,8 @@ This tool for fusion genes identification was develop with aim to rationaly filt
 ### Run analysis 2
 No need for instalation
    1) Download bla_met.R and metacall_wrapper.sh from repository, ensure that R libraries "stringr", "reshape", "reshape2" are include in your R library path
-
-
+   2) Run metacall_wrapper.sh in this way (ensure that metacall_wrapper.sh and bla_met.R is in the same folder):
+      ./metacall_wrapper.sh /PATH_TO_ERICSCRIPT_RESULTS /PATH_TO_JAFFA_RESULTS /PATH_TO_FUSIONCATCHER_RESULTS /OUT_FOLDER
+   NOTE: Ensure that parameteres of script are in exactly same order as mentioned. If you will provide different numbers of parameteres script will not work properly   
 
 
