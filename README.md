@@ -3,10 +3,11 @@ These tools provide way to analyse differential gene expresion and allowing rati
 
   1) perform differential gene expresion in cohort without appropriate control group
   2) combine and filter fusion genes pipelines results using metacaller approach
-<br/> More detail about both methods will come soon. (manuscript in preparation)
+
+More detail about both methods will come soon. (manuscript in preparation)
   
 ## Analysis 1
-Uncoventional statistical approach for differential gene expresion based on comparing individual cases in sample set without control group (for datasets, where in principle no adequate control group exist, for example cSVs as chromothripsis or chromoanasynthesis). More detail will come soon. (manuscript in preparation)
+Uncoventional statistical approach for differential gene expresion based on comparing individual cases in sample set without control group (for datasets, where in principle no adequate control group exist, for example cSVs as chromothripsis or chromoanasynthesis).
 
 ### Run analysis 1
 No need for instalation
