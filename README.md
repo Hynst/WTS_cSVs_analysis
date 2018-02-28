@@ -9,7 +9,7 @@ Uncoventional statistical approach for differential gene expresion based on comp
 
 ### Run analysis 1
 No need for instalation
-  1) Download bla.R RScript from repository 
+  1) Download bla.R RScript from repository, ensure that R library "data.table" is include in your R library path
   2) Copy inputs to bla.R RScript folder:
      <br /> Only neccesary input file is normalized expression table on log2 scale in tab separetated format          "expression_table.tsv")
   3) Run bla.R RScript with appropriate parametres:
@@ -22,3 +22,9 @@ Output file is in .tsv format with lines represented all differential expresed g
 This tool for fusion genes identification was develop with aim to rationaly filter and combine multiple results from different pipelines to maximize results reliability. Such an approach of combining results from different state of art fully automated pipelines (EricScript, JAFFA, FusionCatcher) prevent to call false positive fusion events.
 
 ### Run analysis 2
+No need for instalation
+   1) Download bla_met.R and metacall_wrapper.sh from repository, ensure that R libraries "stringr", "reshape", "reshape2" are include in your R library path
+
+
+
+
