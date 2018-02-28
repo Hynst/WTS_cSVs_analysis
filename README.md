@@ -27,6 +27,6 @@ No need for instalation
    2) Run metacall_wrapper.sh in this way (ensure that metacall_wrapper.sh and bla_met.R is in the same folder):
       ./metacall_wrapper.sh /PATH_TO_ERICSCRIPT_RESULTS /PATH_TO_JAFFA_RESULTS /PATH_TO_FUSIONCATCHER_RESULTS /OUT_FOLDER
       
-   <br /> NOTE: Ensure that parameteres of script are in exactly same order as mentioned. If you will provide different numbers of parameteres script will not work properly   
+   NOTE: Ensure that parameteres of script are in exactly same order as mentioned. If you will provide different numbers of parameteres script will not work properly   
 
 
