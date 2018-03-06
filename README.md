@@ -27,7 +27,7 @@ This tool for fusion genes identification was develop with aim to rationaly filt
 No need for instalation
    1) Download run_metacaller.R and run_MCaller_wrapper.sh from repository, ensure that R libraries "stringr", "reshape", "reshape2" are include in your R library path
    2) Copy all samples results from each pipelines to new folders ie. ~/ERIC , ~/JAFFA , ~/FC
-   3) Please name files prefix in each folder consistently ie. S1_eric_results.tsv, S1_jaffa_results.tsv, S1_fc_results.tsv
+   3) Please name files prefix in each folder consistently ie. "S1_"eric_results.tsv, "S2_"jaffa_results.tsv,     "S3_"fc_results.tsv
    4) Run run_MCaller_wrapper.sh in this way (ensure that metacall_wrapper.sh and bla_met.R is in the same folder):
       ./run_MCaller_wrapper.sh /PATH_TO_ERICSCRIPT_RESULTS /PATH_TO_JAFFA_RESULTS /PATH_TO_FUSIONCATCHER_RESULTS /OUT_FOLDER
       
