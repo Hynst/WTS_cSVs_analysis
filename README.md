@@ -37,6 +37,7 @@ No need for instalation
 <br />│   └── {S1}_fc.results.tsv
 <br />└── jaffa
 <br />    └── {S1}_jaffa.results.tsv
+<br />
    4) Run run_MCaller_wrapper.sh in this way (ensure that metacall_wrapper.sh and bla_met.R is in the same folder):
       ./run_MCaller_wrapper.sh /PATH_TO_ERICSCRIPT_RESULTS /PATH_TO_JAFFA_RESULTS /PATH_TO_FUSIONCATCHER_RESULTS /OUT_FOLDER
       
