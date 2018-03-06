@@ -32,11 +32,11 @@ No need for instalation
    <br /> NOTE: final data folder structure should look like:
 <br />.
 <br />├── eric
-<br />│   └── S1_eric.results.tsv
+<br />│   └── {S1}_eric.results.tsv
 <br />├── fc
-<br />│   └── S1_fc.results.tsv
+<br />│   └── {S1}_fc.results.tsv
 <br />└── jaffa
-<br />    └── S1_jaffa.results.tsv
+<br />    └── {S1}_jaffa.results.tsv
    4) Run run_MCaller_wrapper.sh in this way (ensure that metacall_wrapper.sh and bla_met.R is in the same folder):
       ./run_MCaller_wrapper.sh /PATH_TO_ERICSCRIPT_RESULTS /PATH_TO_JAFFA_RESULTS /PATH_TO_FUSIONCATCHER_RESULTS /OUT_FOLDER
       
