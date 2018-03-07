@@ -1,8 +1,8 @@
 # RNA-Seq data analysis with Complex structural variants (cSVs)
 These tools provide way to inspect differential gene expresion and allow rational filtering and combinig results of fusion gene events with special address to cSVs cases. 
 
-  Analysis 1) perform differential gene expresion in cohort without appropriate control group
-  Analysis 2) combine and filter fusion genes pipelines results using metacaller approach
+  <br /> Analysis 1) perform differential gene expresion in cohort without appropriate control group
+  <br /> Analysis 2) combine and filter fusion genes pipelines results using metacaller approach
 
 More detail about both methods will come soon. (manuscript in preparation)
   
