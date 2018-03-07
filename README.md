@@ -30,22 +30,22 @@ No need for instalation
    3) Please name files prefix in each folder consistently ie. S1_eric.results.tsv, S1_jaffa.results.tsv,     S1_fc.results.tsv
    <br /> NOTE: here "S1" is recognize as sample name, _ is important for sample name recognition. Please provide _ inmediately after sample name
    <br /> NOTE: final data folder structure should look like:
-<br />`.
+<br />.
 <br />├── eric
 <br />│   └── S1_eric.results.tsv
 <br />├── fc
 <br />│   └── S1_fc.results.tsv
 <br />└── jaffa
 <br />    └── S1_jaffa.results.tsv
-<br />`
+<br />
    4) Run run_MCaller_wrapper.sh in this way (ensure that metacall_wrapper.sh and filter_results.R is in the same folder):
-      <br />```
-      <br /> ./run_MCaller_wrapper.sh \
-      <br /> /PATH_TO_ERICSCRIPT_RESULTS \
-      <br /> /PATH_TO_JAFFA_RESULTS \
-      <br /> /PATH_TO_FUSIONCATCHER_RESULTS \
-      <br /> /OUT_FOLDER
-      <br />```
+   ```
+      ./run_MCaller_wrapper.sh \
+      /PATH_TO_ERICSCRIPT_RESULTS \
+      /PATH_TO_JAFFA_RESULTS \
+      /PATH_TO_FUSIONCATCHER_RESULTS \
+      /OUT_FOLDER
+   ```
       
    NOTE: Ensure that parameteres of script are in exactly same order as mentioned. If you will provide different numbers of parameteres script will not work properly   
 
