@@ -29,7 +29,7 @@ No need for instalation
    Command: chmod 744 run_MCaller_wrapper.sh
    2) Copy all samples results from each pipelines to new folders ie. ~/eric , ~/fc , ~/jaffa
    3) Please name files prefix in each folder consistently ie. S1_eric.results.tsv, S1_jaffa.results.tsv,     S1_fc.results.tsv
-   <br /> NOTE: here "S1" is recognize as sample name, _ is important for sample name recognition. Please provide _ inmediately after sample name
+   <br /> NOTE: here "S1" is recognize as sample name, >_ is important for sample name recognition. Please provide >_ inmediately after sample name
    <br /> NOTE: final data folder structure should look like:
 <br />.
 <br />├── eric
