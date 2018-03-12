@@ -7,7 +7,7 @@ These tools provide way to inspect differential gene expresion and allow rationa
 More detail about both methods will come soon. (manuscript in preparation)
   
 ## Analysis 1
-Analysis for datasets, for example cSVs as chromothripsis or chromoanasynthesis, where in principle no adequate control group exist.
+Differential expression analysis for datasets, for example cSVs as chromothripsis or chromoanasynthesis, where in principle no adequate control group exist.
 
 ### Run analysis 1
   1) Download run_DE.R RScript from repository
