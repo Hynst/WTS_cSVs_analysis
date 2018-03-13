@@ -29,13 +29,13 @@ This tool for fusion genes identification was develop with aim to rationaly filt
    <br /> NOTE1: here "S1" is recognized as sample name, _ is important for sample name identification in string. Please provide _ inmediately after sample name
    <br /> NOTE2: final data folder structure should look like:
    ```
-<br />.
-<br />├── eric
-<br />│   └── S1_eric.results.tsv
-<br />├── fc
-<br />│   └── S1_fc.results.tsv
-<br />└── jaffa
-<br /> └── S1_jaffa.results.tsv
+.
+├── eric
+│   └── S1_eric.results.tsv
+├── fc
+│   └── S1_fc.results.tsv
+└── jaffa
+└── S1_jaffa.results.tsv
    ```
    4) Run run_MCaller_wrapper.sh in this way (ensure that metacall_wrapper.sh and filter_results.R are in the same folder):
 
