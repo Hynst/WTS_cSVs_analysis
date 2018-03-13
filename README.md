@@ -35,7 +35,7 @@ This tool for fusion genes identification was develop with aim to rationaly filt
 ├── fc
 │   └── S1_fc.results.tsv
 └── jaffa
-└── S1_jaffa.results.tsv
+    └── S1_jaffa.results.tsv
    ```
    4) Run run_MCaller_wrapper.sh in this way (ensure that metacall_wrapper.sh and filter_results.R are in the same folder):
 
