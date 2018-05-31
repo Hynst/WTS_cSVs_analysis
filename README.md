@@ -13,10 +13,9 @@ Differential expression analysis for cSVs datasets, for example datasets with ch
   1) Download run_DE.R RScript from repository
   2) Copy inputs to run_DE.R RScript folder:
      <br /> Input file is normalized expression table on log2 scale in tab separetated format (gene names in first column) (.tsv)         
-  3) Run run_DE.R RScript with parametres:
-     <br /> `Rscript --vanilla run_DE.R {input_expr_table.tsv} "p_value" {outputfile_name.txt} "tolerance ratio"`
-     <br />  p-value default: 0.05         
-     <br />  tolerance ratio default: 1 (all combination) 
+  3) Run run_DE.R RScript with parameter -h :
+     <br /> `Rscript --vanilla run_DE.R -h`
+     To view list of parameters to run a script
 
 Output file is in tab separated format with lines representing all differential expresed genes in dataset, and with columns for individual samples (up/down regulation tag is used)
  
