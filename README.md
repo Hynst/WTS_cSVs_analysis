@@ -37,8 +37,8 @@ This tool for fusion genes identification was develop with aim to rationaly filt
 └── jaffa
        └── S1_jaffa.results.tsv
    ```
-   4) Run run_DE.R RScript with parameter -h:
-   <br /> `Rscript --vanilla run_DE.R -h`
+   4) Run run_MCaller.R RScript with parameter -h:
+   <br /> `Rscript --vanilla run_MCaller.R -h`
    <br /> ..to view list of parameters to run a script and provide all of them to run analysis
      
   
