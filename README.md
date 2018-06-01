@@ -15,7 +15,7 @@ Differential expression analysis for cSVs datasets, for example datasets with ch
      <br /> Input file is normalized expression table on log2 scale in tab separetated format (gene names in first column) (.tsv)         
   3) Run run_DE.R RScript with parameter -h :
      <br /> `Rscript --vanilla run_DE.R -h`
-     To view list of parameters to run a script
+     <br /> ..to view list of parameters to run a script
 
 Output file is in tab separated format with lines representing all differential expresed genes in dataset, and with columns for individual samples (up/down regulation tag is used)
  
@@ -23,7 +23,7 @@ Output file is in tab separated format with lines representing all differential 
 This tool for fusion genes identification was develop with aim to rationaly filter and combine multiple results from different pipelines (EricScript, JAFFA, FusionCatcher) to maximize results reliability and to prevent call of false positive fusion events.
 
 ### Run analysis 2
-   1) Download filter_results.R and run_MCaller_wrapper.sh from repository, make run_MCaller_wrapper.sh executable `chmod 744 run_MCaller_wrapper.sh`
+   1) Download run_MCaller.R from repository
    2) Copy all samples results from each pipelines to new folders ie. ~/PATH/eric , ~/PATH/fc , ~/PATH/jaffa
    3) Please name files prefix in each folder consistently ie. S1_eric.results.tsv, S1_jaffa.results.tsv,     S1_fc.results.tsv
    <br /> NOTE1: here "S1" is recognized as sample name, _ is important for sample name identification in string. Please provide _ inmediately after sample name
@@ -37,16 +37,8 @@ This tool for fusion genes identification was develop with aim to rationaly filt
 └── jaffa
        └── S1_jaffa.results.tsv
    ```
-   4) Run run_MCaller_wrapper.sh in this way (ensure that metacall_wrapper.sh and filter_results.R are in the same folder):
-
-   ```
-   ./run_MCaller_wrapper.sh \
-   /PATH_TO_ERICSCRIPT_RESULTS \
-   /PATH_TO_JAFFA_RESULTS \
-   /PATH_TO_FUSIONCATCHER_RESULTS \
-   /OUT_FOLDER
-   ```
-      
-   NOTE: Ensure that parameteres of script are in exactly same order as mentioned. If you will provide different numbers of parameteres script will not work properly.   
-
-
+   4) Run run_DE.R RScript with parameter -h:
+   <br /> `Rscript --vanilla run_DE.R -h`
+   <br /> ..to view list of parameters to run a script and provide all of them to run analysis
+     
+  
