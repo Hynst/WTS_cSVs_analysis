@@ -40,5 +40,7 @@ This tool for fusion genes identification was develop with aim to rationaly filt
    4) Run run_MCaller.R RScript with parameter -h:
    <br /> `Rscript --vanilla run_MCaller.R -h`
    <br /> ..to view list of parameters to run a script and provide all of them to run analysis
+
+Output file is in tab separated format with lines representing fusion genes identified by at least 2 fusion genes prediction tools. Sample identificator, related chromosomes for both genes from fusion pairs and tags pointing identification to individual caller are noted in next column.  
      
   
