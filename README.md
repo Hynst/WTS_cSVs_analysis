@@ -12,7 +12,7 @@ Differential expression analysis for cSVs datasets, for example datasets with ch
 ### Run analysis 1
   1) Download run_DE.R RScript from repository
   2) Copy inputs to run_DE.R RScript folder:
-     <br /> Input file is normalized expression table on log2 scale in tab separetated format (gene names in first column) (.tsv)         
+     <br /> Input file is normalized expression table on log2 scale in tab separetated format (gene names in first column)         
   3) Run run_DE.R RScript with parameter -h :
      <br /> `Rscript --vanilla run_DE.R -h`
      <br /> ..to view list of parameters to run a script
