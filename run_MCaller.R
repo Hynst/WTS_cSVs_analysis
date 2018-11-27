@@ -52,42 +52,37 @@ setwd(out_folder)
 for(i in 1:length(eric_samplesheet)){
   
   ### EricScrip filtering and table rearanging ###
-  
-  eric_results <- read.table(paste(eric_dir, "/", eric_samplesheet[i], sep=""), sep="\t", quote = "")
-  eric_results <- eric_results[-1,]
+  eric_results <- read.table(paste0(eric_dir, "/", eric_samplesheet[i]), sep="\t", quote = "", header = T)
   # filtering to only high confidence fusions ES > 0.90
-  eric_results <- eric_results[as.numeric(as.character(eric_results$V25)) > 0.90,]
-  eric_results <- eric_results[-grep("Unable to predict breakpoint position", eric_results[,4]),]
-  eric_results <- eric_results[-grep("Unable to predict breakpoint position", eric_results[,7]),]
+  eric_results <- eric_results[as.numeric(as.character(eric_results$EricScore)) > 0.90,]
+  eric_results <- eric_results[-grep("Unable to predict breakpoint position", eric_results$Breakpoint1),]
+  eric_results <- eric_results[-grep("Unable to predict breakpoint position", eric_results$Breakpoint2),]
   
   #Extract sample name
   sample_name<-basename(paste0(eric_samplesheet[i]))
   sample_string<-gsub("_.*","", sample_name)
   
   ### JAFFA filtering and table rearanging ###
-  jaffa_results <- read.table(paste(jaffa_dir, "/", jaffa_samplesheet[i], sep=""), sep="\t", quote = "" )
-  # filtering to only high confidence fusions -
+  jaffa_results <- read.table(paste0(jaffa_dir, "/", jaffa_samplesheet[i]), sep="\t", quote = "", header = T)
+  # filtering to only high confidence fusions
   jaffa_results <- jaffa_results[grep("HighConfidence",jaffa_results[,17]),]
   
   ### FusionCatcher filtering a table rearanging ###
-  fusioncatcher_results <- read.table(paste(fc_dir, "/", fc_samplesheet[i], sep=""), sep="\t", quote = "")
+  fusioncatcher_results <- read.table(paste0(fc_dir, "/", fc_samplesheet[i]), sep="\t", quote = "", header = T)
   
-  caller1 <- data.frame(sample=sample_string, gene1=eric_results[,1], position1 = eric_results[,4],
-                        chromosome1=eric_results[,3],
-                        gene2=eric_results[,2], position2 = eric_results[,7],
-                        chromosome2=eric_results[,6],
+  # create filtered data frames for individual callers
+  caller1 <- data.frame(sample=sample_string, gene1=eric_results$GeneName1, position1 = eric_results$Breakpoint1,
+                        chromosome1=eric_results$chr1,
+                        gene2=eric_results$GeneName2, position2 = eric_results$Breakpoint2,
+                        chromosome2=eric_results$chr2,
                         tool="eric")
-  caller1 <-  caller1[-1,]    
   caller1 <-caller1[!duplicated(caller1[,c(2,4,5,7)]),]
   
-  caller2 <- data.frame(sample=sample_string, gene1=fusioncatcher_results[,1], position1 = gsub(":", "", str_sub(fusioncatcher_results[,9],3)),
+  caller2 <- data.frame(sample=sample_string, gene1=fusioncatcher_results[,1], position1 = sub('.*\\:', '', gsub('.{2}$', '',fusioncatcher_results[,9])),
                         chromosome1=gsub(":", "",str_sub(fusioncatcher_results[,9],1,2)),
-                        gene2=fusioncatcher_results[,2], position2 = gsub(":", "", str_sub(fusioncatcher_results[,10],3)),
+                        gene2=fusioncatcher_results[,2], position2 = sub('.*\\:', '', gsub('.{2}$', '',fusioncatcher_results[,10])),
                         chromosome2=gsub(":", "",str_sub(fusioncatcher_results[,10],1,2)),
                         tool="fusioncatcher")
-  #caller2<-caller2[gsub("+", "", gsub("-", "", caller2$position1)),]
-  #caller2<-caller2[gsub("+", "", gsub("-", "", caller2$position1)),]
-  caller2 <-  caller2[-1,]
   caller2 <-caller2[!duplicated(caller2[,c(2,4,5,7)]),]
   
   #split fusion genes from jaffa results to two diferent columns    
@@ -100,7 +95,6 @@ for(i in 1:length(eric_samplesheet)){
                         gene2=gene2, position2 = jaffa_results[,7],
                         chromosome2=gsub('"', "",gsub("chr","",jaffa_results[,6])),
                         tool="jaffa")
-  caller3 <-  caller3[-1,]
   caller3 <-caller3[!duplicated(caller3[,c(2,4,5,7)]),]
   
   # paste
