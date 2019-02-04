@@ -71,7 +71,7 @@ part_overlap <- function(x, num_s = y){
     list_len <- length(x)
     tab_it <- table(unlist(x))
     tab_it_perc <- tab_it / list_len
-    names(tab_it_perc[tab_it_perc >= num_s])
+    names(tab_it_perc[tab_it_perc <= num_s])
   }
 
 # function 3 (recognizeOutLiers)
@@ -147,7 +147,7 @@ recognizeOutLiers <- function(x,y,z,p){
   }))
   
   final_table_tmp<-rbind(tab_up, tab_down)
-  final_table_tmp<-final_table_tmp[!duplicated(final_table_tmp$gene),]
+  #final_table_tmp<-final_table_tmp[!duplicated(final_table_tmp$gene),]
   
   # write final results
   final_table<-data.table::dcast.data.table(final_table_tmp, formula=gene~sample, value.var = "reg", fill = "0" )
