@@ -29,6 +29,7 @@ option_list <- list(
 )
 opt_parser <- OptionParser(option_list=option_list);
 opt <- parse_args(opt_parser)
+out_dir <- dirname(opt$output_file)
 
 if (is.null(opt$file)){
   print_help(opt_parser)
@@ -71,7 +72,7 @@ part_overlap <- function(x, num_s = y){
     list_len <- length(x)
     tab_it <- table(unlist(x))
     tab_it_perc <- tab_it / list_len
-    names(tab_it_perc[tab_it_perc <= num_s])
+    names(tab_it_perc[tab_it_perc >= num_s])
   }
 
 # function 3 (recognizeOutLiers)
@@ -123,11 +124,11 @@ recognizeOutLiers <- function(x,y,z,p){
     
     #save outputs (mozna zakomentovat!!!)
     lapply(dif_gene_up, function(r){
-      write.table(r, file=paste0(sampleID[i],"_upregulated_genes.txt"), sep="\t", quote = F, row.names = F)
+      write.table(r, file=paste0(out_dir, "/", sampleID[i],"_upregulated_genes.txt"), sep="\t", quote = F, row.names = F)
     })
     
     lapply(dif_gene_down, function(q){
-      write.table(q, file=paste0(sampleID[i],"_downregulated_genes.txt"), sep="\t", quote = F, row.names = F)
+      write.table(q, file=paste0(out_dir, "/", sampleID[i],"_downregulated_genes.txt"), sep="\t", quote = F, row.names = F)
     })
     
   }
@@ -147,7 +148,7 @@ recognizeOutLiers <- function(x,y,z,p){
   }))
   
   final_table_tmp<-rbind(tab_up, tab_down)
-  #final_table_tmp<-final_table_tmp[!duplicated(final_table_tmp$gene),]
+  final_table_tmp<-final_table_tmp[!duplicated(final_table_tmp$gene),]
   
   # write final results
   final_table<-data.table::dcast.data.table(final_table_tmp, formula=gene~sample, value.var = "reg", fill = "0" )
